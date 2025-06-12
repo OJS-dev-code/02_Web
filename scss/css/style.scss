@@ -1,0 +1,382 @@
+*{margin: 0; padding: 0;}
+html {font-size:62.5%}
+// 시맨틱태그 전부 블락요소 처리
+article, aside, figcaption, figure, footer, header, section, nav, hgroup {
+    display: block;
+}
+body {
+    padding: 3rem; //30px 정도
+    font-family: "Nanum Gothic" sans-serif; //나눔고딕 없으면 아무 고딕체나 사용
+}
+ol, ul {list-style: none;}
+
+//mixin == js 함수기능
+
+//float left되는 태그들의 그 다음 태그들이 따라붙어오지 않고 아래로 붙도록 함
+@mixin clearfix(){
+    &::after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+//media querry -> 반응형 웹
+@mixin mq($screen-width){
+    @if $screen-width == 'small-screen-1'{
+        @media screen and (min-width : 900px) and (max-width: 1200px){ // 상세조건. 조건명 'small-screen-1
+            @content;
+            //클래스명 small-screen-1 들어오면 900~1200사이즈 만듦
+        }
+    } @else if $screen-width == 'small-screen-2'{
+        @media screen and (min-width : 701px) and (max-width: 899px){
+            @content;
+            //701~890사이즈 만듦
+        }
+    }@else if $screen-width == 'small-screen-3'{
+        @media screen and (max-width: 700px){
+            @content;
+            //small-screen-3 클래스 들어오면 700사이즈 만듦
+        }
+    }
+}
+
+//sass 변수 -> $
+$color-primary:#285a91; //주조색
+$color-secondary: #1f9cfd; 
+$color-white:#fff;
+$color-blue-1: #a8d8ff;
+$color-blue-2: #c1e1ff;
+$color-blue-3: #d6eaff;
+$color-grey-ligth: #b9b9b9;
+$color-grey-dark: #474747;
+
+.nav{
+    &-checkbox{display: none;}
+    &-button{
+        background-color: #c4e3ff;
+        width: 7rem;
+        height: 6rem;
+        position: fixed;
+        top: 7rem;
+        right: 8rem;
+        z-index: 9999;
+        cursor: pointer;
+        border-radius: 2px;
+        box-shadow: 0 1rem 1rem rgba(#000, 0.1);
+        text-align: center;
+    }
+    &-icon{
+        position: relative;
+        margin-top: 3rem;
+        //&-icon 기준으로 
+        &::before{top: -.8rem;}        
+        &::after{top: .8rem;}
+        &::before, &::after{
+            content:"";
+            position: absolute;
+            left: 0;
+            transition: .2s;
+        } 
+        &, &::before, &::after{
+            width: 3rem;
+            height: 2px;
+            background: #333;
+            display: inline-block;
+        }
+    }
+    //다시 nav기준
+    &-bg{
+        background-image: radial-gradient($color-primary, $color-secondary);
+        width: 7rem;
+        height: 6rem;
+        position: fixed;
+        z-index: 999;
+        top: 7rem;
+        right: 8rem;
+        border-radius: 2px;
+        transition: .8s;
+    }
+    &-checkbox:checked ~ &-bg{
+        transform: scale(80);
+    }
+    &-checkbox:checked ~ &-button &-icon::before{
+        //일직선 -> 대각선 선 변경
+        top: 0;
+        transform: rotate(135deg);
+    }
+    &-checkbox:checked ~ &-button &-icon::after{
+        top: 0;
+        transform: rotate(-135deg);
+    }
+    &-checkbox:checked ~ &-button &-icon{
+        background: transparent;
+    }
+
+    //ul list
+    &-body{
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: -120%;
+        width: 100vw;
+        height: 100vh;
+        opacity: 0;
+        transition: .8s;
+    }
+    //ul tag
+    &-list{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    //a tag
+    &-link{
+        display: inline-block;
+        font-size: 3rem;
+        padding: 1rem 2rem;
+        color: $color-white;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: .4s;
+        background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50% );
+        background-size: 220%;
+        //&-link:hover
+        &:hover{
+            color: $color-primary;
+            background-position: 100%;
+            transform: translateX(1rem);
+        }
+    }
+    // ~ == 동일 선택자 
+    &-checkbox:checked ~ &-body{
+        left: 0;
+        opacity: 1;
+    }
+}
+
+header{
+    width: 100%;
+    height: 90vh;
+    background-image: linear-gradient(to right, $color-primary 0%, $color-secondary 100%), url(../images/header-image.jpg);
+    background-size: cover;
+    background-blend-mode: multiply;
+    position: relative;
+
+    #logo-text{
+        position: absolute;
+        left: 7rem;
+        top: 4rem;
+        z-index: 99;
+        color: $color-white;
+        font-size: 5.6rem;
+        text-transform: uppercase;
+        letter-spacing: -.1rem;
+        animation-name:logoani;
+        animation-duration: 1s;
+        animation-delay: 2s;
+        animation-iteration-count: 5;
+        animation-direction: alternate;
+    }
+    #header-text{
+        position: absolute;
+        left: 7rem;
+        bottom: 23%;
+        font-weight: 700;
+        color: $color-white;
+        &-main{
+            font-size: 7.2rem;
+            line-height: 7.2rem;
+            animation: headerani 1s 1s backwards; //이름 headerani duration 1s delay 1s one time
+            margin-bottom: 10px;
+        }
+        &-sub{
+            font-size: 2.4rem;
+            line-height: 3rem;
+            animation: logoani 1s 5 1.5s backwards; 
+            //1초동안 5번 실행, 1.5s 기다렸다 동작, 이 애니메이션을 1번만 실행
+            //animation: name duration timing-function delay interation-count direction fill-mode
+        }
+    }
+}
+
+h2{
+    font-size: 2.4rem;
+    font-weight: 800;
+    text-transform: uppercase; 
+    color: $color-secondary;
+}
+h3{
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase; 
+    color: $color-grey-dark;
+    padding: .5rem 0;
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+    #section-about{
+        width: 66.666%;
+        background: #ededed;
+        padding: 0 6.5rem 0;
+        min-height: 42rem;
+        box-sizing: border-box;
+        @include mq('small-screen-1'){
+            width: 100%;
+        }
+        @include mq('small-screen-2'){
+            width: 100%;
+            height: 64rem;
+        }
+        @include mq('small-screen-3'){
+            width: 100%;
+            height: 90rem;
+        }
+        .about-wrap{
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            #section-about-words{
+                width: 65%;
+                padding: 0 1rem 0 0;
+                box-sizing: border-box;
+
+                @include mq('small-screen-2'){
+                    width: 100%;
+                }
+                @include mq('small-screen-3'){
+                    width: 100%;
+                }
+                p{
+                    font-size: 1.4rem;
+                    padding: 1.5rem 0;
+                    font-weight: 700;
+                    text-align: justify;
+                }
+            }
+            #section-about-photo{
+                width: 35%;
+                @include mq('small-screen-2'){
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    .photo{margin-right: 10px;}
+                }
+                @include mq('small-screen-3'){
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    .photo{margin-bottom: 10px; width: 100%;}
+                }
+            }
+        }
+    }
+    #section-etc{
+        width: 33.334%;
+        @include mq('small-screen-1'){
+            width: 100%;
+        }
+        @include mq('small-screen-2'){
+            width: 100%;
+        }
+        @include mq('small-screen-3'){
+            width: 100%;
+        }
+        [id^="etc-"]{
+            height: calc(574.31px/3);
+            overflow:hidden;
+        }
+        .etc{
+            @include mq('small-screen-1'){
+                width: 33.333%;
+                float: left;
+                height: 20rem;
+            }
+            @include mq('small-screen-2'){
+                width: 33.333%;
+                float: left;
+                height: 30rem;
+            }
+            @include mq('small-screen-3'){
+                width: 33.333%;
+                float: left;
+                height: 30rem;
+            }
+            &:nth-child(1){
+                background-color: $color-blue-1;
+            }
+            &:nth-child(2){
+                background-color: $color-blue-2;
+            }
+            &:nth-child(3){
+                background-color: $color-blue-3;
+            }
+            .etc-icon{
+                width: 30%;
+                float: left;
+                text-align: center;
+                display: flex;
+                height: 191.42px;
+                align-items: center;
+                justify-content: center;
+            }
+            .etc-text{
+                width: 70%;
+                float: left;
+                display: flex;
+                height: 191.42px;
+                align-items: center;
+            }
+        }
+    }
+}
+
+footer{
+    background-color: $color-grey-dark;
+    padding: 6rem 2rem 3rem 7rem;
+    color: $color-grey-ligth;
+    display:flex;
+    #logo-text-footer{
+        font-size: 4rem;
+        text-transform: uppercase;
+        margin-right: 20px;
+    }
+    #copyright{
+        font-size: 1.2rem;
+        p:last-child{
+            margin-top: 15px;
+        }
+    };
+}
+
+@keyframes logoani{
+    0%{
+        opacity: 0.1;
+        transform: translateX(-8rem);
+    }
+    80%{
+        transform: translateX(1rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes headerani {
+    0%{
+        opacity: 0.1;
+        transform: translateX(10rem);
+    }
+    80%{
+        transform: translateX(-1rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

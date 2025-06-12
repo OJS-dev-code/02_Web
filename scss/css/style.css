@@ -1,0 +1,373 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+article, aside, figcaption, figure, footer, header, section, nav, hgroup {
+  display: block;
+}
+
+body {
+  padding: 3rem;
+  font-family: "Nanum Gothic" sans-serif;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+.nav-checkbox {
+  display: none;
+}
+.nav-button {
+  background-color: #c4e3ff;
+  width: 7rem;
+  height: 6rem;
+  position: fixed;
+  top: 7rem;
+  right: 8rem;
+  z-index: 9999;
+  cursor: pointer;
+  border-radius: 2px;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.nav-icon {
+  position: relative;
+  margin-top: 3rem;
+}
+.nav-icon::before {
+  top: -0.8rem;
+}
+.nav-icon::after {
+  top: 0.8rem;
+}
+.nav-icon::before, .nav-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  transition: 0.2s;
+}
+.nav-icon, .nav-icon::before, .nav-icon::after {
+  width: 3rem;
+  height: 2px;
+  background: #333;
+  display: inline-block;
+}
+.nav-bg {
+  background-image: radial-gradient(#285a91, #1f9cfd);
+  width: 7rem;
+  height: 6rem;
+  position: fixed;
+  z-index: 999;
+  top: 7rem;
+  right: 8rem;
+  border-radius: 2px;
+  transition: 0.8s;
+}
+.nav-checkbox:checked ~ .nav-bg {
+  transform: scale(80);
+}
+.nav-checkbox:checked ~ .nav-button .nav-icon::before {
+  top: 0;
+  transform: rotate(135deg);
+}
+.nav-checkbox:checked ~ .nav-button .nav-icon::after {
+  top: 0;
+  transform: rotate(-135deg);
+}
+.nav-checkbox:checked ~ .nav-button .nav-icon {
+  background: transparent;
+}
+.nav-body {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: -120%;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  transition: 0.8s;
+}
+.nav-list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.nav-link {
+  display: inline-block;
+  font-size: 3rem;
+  padding: 1rem 2rem;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.4s;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+  background-size: 220%;
+}
+.nav-link:hover {
+  color: #285a91;
+  background-position: 100%;
+  transform: translateX(1rem);
+}
+.nav-checkbox:checked ~ .nav-body {
+  left: 0;
+  opacity: 1;
+}
+
+header {
+  width: 100%;
+  height: 90vh;
+  background-image: linear-gradient(to right, #285a91 0%, #1f9cfd 100%), url(../images/header-image.jpg);
+  background-size: cover;
+  background-blend-mode: multiply;
+  position: relative;
+}
+header #logo-text {
+  position: absolute;
+  left: 7rem;
+  top: 4rem;
+  z-index: 99;
+  color: #fff;
+  font-size: 5.6rem;
+  text-transform: uppercase;
+  letter-spacing: -0.1rem;
+  animation-name: logoani;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-iteration-count: 5;
+  animation-direction: alternate;
+}
+header #header-text {
+  position: absolute;
+  left: 7rem;
+  bottom: 23%;
+  font-weight: 700;
+  color: #fff;
+}
+header #header-text-main {
+  font-size: 7.2rem;
+  line-height: 7.2rem;
+  animation: headerani 1s 1s backwards;
+  margin-bottom: 10px;
+}
+header #header-text-sub {
+  font-size: 2.4rem;
+  line-height: 3rem;
+  animation: logoani 1s 5 1.5s backwards;
+}
+
+h2 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #1f9cfd;
+}
+
+h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #474747;
+  padding: 0.5rem 0;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+main #section-about {
+  width: 66.666%;
+  background: #ededed;
+  padding: 0 6.5rem 0;
+  min-height: 42rem;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+  main #section-about {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 701px) and (max-width: 899px) {
+  main #section-about {
+    width: 100%;
+    height: 64rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  main #section-about {
+    width: 100%;
+    height: 90rem;
+  }
+}
+main #section-about .about-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+main #section-about .about-wrap #section-about-words {
+  width: 65%;
+  padding: 0 1rem 0 0;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 701px) and (max-width: 899px) {
+  main #section-about .about-wrap #section-about-words {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 700px) {
+  main #section-about .about-wrap #section-about-words {
+    width: 100%;
+  }
+}
+main #section-about .about-wrap #section-about-words p {
+  font-size: 1.4rem;
+  padding: 1.5rem 0;
+  font-weight: 700;
+  text-align: justify;
+}
+main #section-about .about-wrap #section-about-photo {
+  width: 35%;
+}
+@media screen and (min-width: 701px) and (max-width: 899px) {
+  main #section-about .about-wrap #section-about-photo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  main #section-about .about-wrap #section-about-photo .photo {
+    margin-right: 10px;
+  }
+}
+@media screen and (max-width: 700px) {
+  main #section-about .about-wrap #section-about-photo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  main #section-about .about-wrap #section-about-photo .photo {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+}
+main #section-etc {
+  width: 33.334%;
+}
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+  main #section-etc {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 701px) and (max-width: 899px) {
+  main #section-etc {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 700px) {
+  main #section-etc {
+    width: 100%;
+  }
+}
+main #section-etc [id^=etc-] {
+  height: 191.4366666667px;
+  overflow: hidden;
+}
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+  main #section-etc .etc {
+    width: 33.333%;
+    float: left;
+    height: 20rem;
+  }
+}
+@media screen and (min-width: 701px) and (max-width: 899px) {
+  main #section-etc .etc {
+    width: 33.333%;
+    float: left;
+    height: 30rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  main #section-etc .etc {
+    width: 33.333%;
+    float: left;
+    height: 30rem;
+  }
+}
+main #section-etc .etc:nth-child(1) {
+  background-color: #a8d8ff;
+}
+main #section-etc .etc:nth-child(2) {
+  background-color: #c1e1ff;
+}
+main #section-etc .etc:nth-child(3) {
+  background-color: #d6eaff;
+}
+main #section-etc .etc .etc-icon {
+  width: 30%;
+  float: left;
+  text-align: center;
+  display: flex;
+  height: 191.42px;
+  align-items: center;
+  justify-content: center;
+}
+main #section-etc .etc .etc-text {
+  width: 70%;
+  float: left;
+  display: flex;
+  height: 191.42px;
+  align-items: center;
+}
+
+footer {
+  background-color: #474747;
+  padding: 6rem 2rem 3rem 7rem;
+  color: #b9b9b9;
+  display: flex;
+}
+footer #logo-text-footer {
+  font-size: 4rem;
+  text-transform: uppercase;
+  margin-right: 20px;
+}
+footer #copyright {
+  font-size: 1.2rem;
+}
+footer #copyright p:last-child {
+  margin-top: 15px;
+}
+
+@keyframes logoani {
+  0% {
+    opacity: 0.1;
+    transform: translateX(-8rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes headerani {
+  0% {
+    opacity: 0.1;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}/*# sourceMappingURL=style.css.map */
