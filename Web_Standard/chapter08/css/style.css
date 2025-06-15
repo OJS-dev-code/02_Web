@@ -1,0 +1,118 @@
+/* #wrap {
+    width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+}
+#loginWrap{}
+#loginWrap input{
+    width: 100%;
+    margin-bottom: 10px;
+}
+#loginWrap input[type="text"]{
+    padding: 10px 20px;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid #000;
+}
+#loginWrap input[value]{
+    font-weight: bold;
+}
+#loginWrap input:nth-child(2){
+    background: url(../images/ico-eye-off.png) no-repeat right 10px center;
+    outline: none;
+}
+#loginWrap input[type="submit"]{
+    padding: 10px 20px;
+    background: #0c82e9;
+    color: #fff;
+    border: none;
+}
+#loginWrap input:focus {
+    outline:3px dotted rgb(177, 171, 170);
+}
+.signWrap{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+.signWrap a{
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+.signWrap a:first-child {
+    position: relative;
+    border: 1px solid #d3e6f6;
+    background: #ebf6ff;
+    border-radius: 3px;
+    padding: 5px 10px 5px 30px;
+}
+.signWrap a:first-child::before{
+    content: "";
+    width: 15px; height: 15px;
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    background: url(../images/ico-join.png) no-repeat;
+}
+.signWrap a:last-child {
+    color: #222222;
+} */
+
+#wrap{
+    width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+}
+#loginWrap input{
+    width: 100%;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    outline: none;
+    font-weight: bold;
+}
+#loginWrap input[type="text"]{
+    box-sizing: border-box;
+}
+#loginWrap input[type="text"]:focus {
+    outline: 3px dotted tomato;
+}
+#loginWrap input:nth-child(2){
+    background: url(../images/ico-eye-on.png) no-repeat right 10px center;
+}
+#loginWrap input[type="submit"] {
+    background: #0c82e9;
+    border: none;
+    color: #fff;
+}
+
+
+.signWrap{
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.signWrap a{
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+.signWrap a:first-child{
+    border: 1px solid #d3e6f6;
+    background: #ebf6ff;
+    border-radius: 3px;
+    padding:  5px 10px 5px 30px;
+    position: relative;
+}
+.signWrap a:first-child::before{
+    content: "";
+    width: 15px; height: 15px;
+    position: absolute;
+    top: 9px; 
+    left: 10px;
+    background: url(../images/ico-join.png) no-repeat;
+}
+.signWrap a:last-child{
+    color: #222;
+}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index04_readonly and required</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        /* 선생님이작성한css */
+        body {margin: 50px;}
+        h2 {text-align: center; font-size: 24px; font-weight: 700;}
+        form {
+            border: 5px solid #ccc; 
+            width: 700px; 
+            margin: 50px auto;
+            padding: 30px;
+            /* 전체 width는 width+border+양옆padding = 700+60+10 = 770  */
+            /* 만약 width를 770이 아니라 700으로 유지하고 싶다면 box-sizing:borderbox; */
+        }
+        legend {display:none;}
+        li {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        li label {
+            display: inline-block;
+            width: 78px;
+        }
+        li input {
+            width: 87%;
+            padding: 8px 5px;
+            box-sizing: border-box;
+        }
+        li select {
+            width: 87%;
+            padding: 8px 5px;
+            box-sizing: border-box;
+        }
+        li textarea {
+            width: 87%;
+            padding: 8px 5px;
+            box-sizing: border-box;
+        }
+        #d-day {width: 50%;}
+        small {
+            font-size: 12px; 
+            position: relative; 
+            top: 10px; 
+            left: 5px;
+        }
+        h3 {text-align: center; margin:20px 0;}
+        .button li{
+            border: none;
+            float: left;
+        }
+        .button li label {width: 100px;}
+        .button li input {width: 35px;}
+        .button:after {clear: both; content: ""; display: block;}
+        #checkB label {width: 205px;}
+        div {text-align: center; margin-top: 40px;}
+        div input {
+            border: none;
+            background: #f55555;
+            color: #ffffff;
+            padding: 10px 20px;
+        }
+        
+        /* 내가작성한css */
+        /* fieldset {width:400px; padding: 25px 20px; margin: auto; border: 1px solid #333;}
+        #shipping input {
+            width: 280px;
+        }
+        #shipping #d-day {
+            width: 100px;
+        }
+        li {
+            padding-bottom: 10px;
+        }
+        label {
+            display: inline-block;
+            width: 70px;
+        }
+        div {
+            margin: auto;
+        } */
+    </style>
+</head>
+<body>
+    <!-- h2 : block -->
+    <h2>배송 정보</h2> 
+    <form action="#" method="get" >
+        <fieldset>
+            <legend>배송 정보</legend>
+            <ul id="shipping">
+                <li>
+                    <label for="prod">주문 상품</label>
+                    <input type="text" id="prod" value="상품용 3kg" readonly>
+                </li>
+                <li>
+                    <label for="user-name">이름</label>
+                    <input type="text" id="user-name" autofocus required>
+                </li>
+                <li>
+                    <label for="user-addr">배송 주소</label>
+                    <input type="text" id="user-addr" required>
+                </li>
+                <li>
+                    <label for="user-email">이메일</label>
+                    <input type="email" id="user-email">
+                </li>
+                <li>
+                    <label for="user-phone">연락처</label>
+                    <input type="tel" id="user-phone" placeholder="하이픈 빼고 입력해 주세요.(01012345678)" required>
+                </li>
+                <li>
+                    <label for="d-day">배송 지정</label>
+                    <input type="date" id="d-day">
+                    <small>(주문일로부터 최소 3일 이하)</small>
+                </li>
+                <li>
+                    <label for="path">가입 경로</label>
+                    <select id="path">
+                        <option value="blog">blog</option>
+                        <option value="search">검색</option>
+                        <option value="sns">SNSfsadf</option>
+                        <option value="etc">기타</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="memo">메모</label>
+                    <textarea name="memo" id="memo" maxlength="500">남길 말씀이 있다면 여기에...
+                    </textarea>
+                </li>
+            </ul>
+        </fieldset>
+        <hr>
+        <fieldset>
+            <legend>이벤트와 새로운 소식</legend>
+            <h3>이벤트와 새로운 소식</h3>
+            <ul id="radioB" class="button">
+                <li>
+                    <input type="radio" name="mail" id="mail-on" value="mailing-on">
+                    <label for="mail-on">메일 수신</label>
+                </li>
+                <li>
+                    <input type="radio" name="mail" id="mail-off" value="mailing-off" checked>
+                    <label for="mail-off">메일 수신 안함</label>
+                </li>
+            </ul>
+            <hr>
+            <h3>개인정보 수집 약관 동의</h3>
+            <ul id="checkB" class="button">
+                <li>
+                    <input type="checkbox" name="personal-info" id="p1" checked>
+                    <label for="p1">이용 약관 동의</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="personal-info" id="p2" checked>
+                    <label for="p2">개인 정보 수집 이용 동의</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="ipersonal-info" id="p3" checked>
+                    <label for="p3">위치기반 서비스 이용약관 동의</label>
+                </li>
+            </ul>
+        </fieldset>
+        <div>
+            <input type="submit" value="주문하기">
+            <input type="reset" value="취소하기">
+        </div>
+    </form>
+</body>
+</html>

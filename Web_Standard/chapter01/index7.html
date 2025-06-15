@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index_07_Text_pr</title>
+    <style>
+        .wrap{
+            border: 5px solid #ddd;
+            padding: 50px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h1>Entity Code를 이용한 공백 문자 및 특수문자 삽입</h1>
+        <hr>
+        <div>서울시 종로구 숭인동 현대 빌라. 조지현&amp;선생님&nbsp;&lt;TEL:02-1234-1234&gt;
+        </div>
+        <div>
+        COPYRIGHT&copy;2019 Jeehyun Publishing Group ALL RIGHTS RESERVED.
+        </div>
+    </div>
+    <div class="wrap">
+        <h2>텍스트 관련 요소</h2>
+        <h5>자주 쓰는 것 : strong, em</h5>
+        <hr>
+        <!-- blockquote 인용문 : 남이 만든 내용을 가져올 때  -->
+        <h3>blockquote ~ 인용문</h3>
+        <blockquote cite="https://www.ifreesite.com/scriptures/analects-01.htm?utm_source=chatgpt.com"><q>배우고 때때로 익히면, 또한 기쁘지 아니한가<q>(學而時習之 不亦說乎)</q></q></blockquote>
+        <h3>strong</h3>
+        <p><strong>굵게 강조할 text</strong></p>
+        <p>strong은 웹사이트의 내용을 <strong>강조</strong>할 때 사용한다.</p>
+
+        <h3>b (bold)</h3>
+        <p><b>디자인할 때 사용하는 b태그</b></p>
+        <p>b는 웹사이트의 <b>굵은 디자인</b>을 할 때 사용한다.</p>
+
+        <h3><em>em(기울기)</em>, <i>i(기울기 Italic)</i>, <sub>sub(아래첨자)</sub>, <sup>sup(윗첨자)</sup></h3>
+        <p>기울기 em <em>ipsum dolor sit amet</em><br> 
+            기울기 i <i>adipisicing elit.</i><br> 
+            아랫첨자 sub dipisicing elit
+            <sub>enim corrupti animi nulla </sub><br>
+            윗첨자 sup dipisicing elit<sup>aspernatur ducimus, alias, dicta,</sup>
+        </p>
+
+        <h3>mark</h3>
+        <p><mark>글자에 배경색을 넣어주는 mark태그</mark></p>
+        <p>Lorem <mark>ipsum dolor, sit amet consectetur adipisicing elit. Earum adipisci hic qui molestias</mark> tempore </p>
+
+        <h3>meter</h3>
+        <p>value 속성을 주지 않으면 바로 생성된다. value는 최대 1, 최소 0으로, 45%라면 value 값으로 0.45를 줘야 한다. <meter value=".45"></meter></p>
+        <p>독일의 가장 중심적인 와인 생산 지역인 라인가우 지역의 포도 품종에 리즐리 80% <meter value="0.8">80%</meter>, 슈페트버건드 8% <meter value="0.08">8%</meter>가 대표적이다.</p>
+
+        <h3>ruby, rt</h3>
+        <p>ruby와 rt는 글자를 위아래로 겹치게 할 수 있다. ruby태그로 글자를 감싸 준 후에 올리고자 하는 부분을 rt로 묶는다. <ruby>ruby <rt>rt </rt></ruby></p>
+        <p><ruby>韓子 <rt>한자</rt></ruby></p>
+
+        <h3>del(delete 삭제) ins (insert 추가)</h3>
+        <del>삭제된 내용</del> 중앙선 추가 <br>
+        <ins>추가된 내용</ins> 밑줄 추가
+        <p>가격: 13000원<small>부가세별도</small></p>
+
+        <h3>details</h3>
+        <details>
+            <summary>details는 세부 항목이나 추가 정보를 숨겨 놓았다가 펼쳐 보여줄 수 있는 기능</summary>
+            <p>우와!!!!</p>
+        </details>
+    </div>
+</body>
+</html>

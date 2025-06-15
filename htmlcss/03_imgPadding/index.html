@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지여백없애기</title>
+    <style>
+        /* 이미지는 원래 inline요소라, text로 취급됨 -> 아래로 작은 여백이 생김 */
+        #box {border: 3px solid maroon;}
+        img {
+            /* vertical-align: bottom; */
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <img src="./img/choijihoon_korea.jpg" alt="최지훈국대샷">
+    </div>
+</body>
+</html>

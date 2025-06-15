@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>이미지 배치하고 롤오버시 블러 효과 적용하기</title>
+		<meta charset="UTF-8">
+		<style type="text/css">
+			* {margin: 0;padding: 0;}
+			/* 선생님 */
+			/* h1 {
+				text-align: center;
+				color: #fff;
+				font-style: italic;
+				text-shadow: -5px -5px 10px #000;
+			}
+			#bookList {
+				background: url(./images/book_bg.png) no-repeat;
+				width: 498px; height: 246px;
+				margin: 50px auto;
+				border: 5px solid #ddd;
+				border-radius: 20px;
+				padding-top: 25px;
+			}
+			#bookList ul{
+				list-style: none;
+				display: flex;
+				margin-left: 20px;
+			}
+			#bookList ul li{position: relative;}
+			#bookList ul li:hover{box-shadow: 0 0 40px pink;}
+			#bookList ul li:not(:last-child){margin-right: 64px;}
+			#bookList ul li a .hit{
+				width: 50px; height: 50px;
+				background:url(./images/ico_hot.png) no-repeat;
+				display: block;
+				position:absolute;
+				top: -20px;left: -20px;
+			} */
+			h1 {
+				color: #fff;
+				text-shadow: -3px -3px 7px #000;
+				font-style: italic;
+				text-align: center;
+			}
+			#bookList {
+				background:url(images/book_bg.png) no-repeat;
+				width: 498px; height: 246px;
+				margin: 50px auto;
+				border: 5px solid #ddd;
+				border-radius: 20px;
+				padding-top: 25px;
+			}
+			#bookList ul{
+				display: flex;
+				margin-left: 20px;
+				list-style: none;
+			}
+			#bookList ul li{position: relative;}
+			#bookList ul li:hover{
+				box-shadow: 0 0 20px violet;
+			}
+			#bookList ul li:not(:last-child){
+				margin-right: 64px;
+			}
+			#bookList ul li a .hit{
+				width: 40px; height: 40px;
+				position: absolute;
+				top: -20px;
+				left: -20px;
+				display: block;
+				background: url(images/ico_hot.png);
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>New Book</h1>
+		<div id="bookList">
+			<ul>
+				<li><a href="#"><span><img src="images/book1.png" width="107" height="156" alt="book1" class="frame"/><span class="hit"></span></span></a></li>
+				<li><a href="#"><span><img src="images/book2.png" width="107" height="156" alt="book2" class="frame"/><span class="hit"></span></span></a></li>
+				<li><a href="#"><span><img src="images/book3.png" width="107" height="156" alt="book3" /><span class="hit"></span></span></a></li>
+			</ul>
+		</div>
+	</body>
+</html>

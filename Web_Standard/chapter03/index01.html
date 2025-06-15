@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index01_tablepr</title>
+    <style>
+        #table1 {
+            border: 1px solid #ccc;
+        }
+        
+        table, th, td {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+            text-align : center;
+        }
+        th, td {
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <table border="2" id="table1" style="width: 500px; height: 200px;">
+        <tr>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td rowspan="3"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+    </table>
+    <hr>
+    <h2>상품 구성</h2>
+    <table>
+        <caption>선물용과 가정용 상품 구성</caption>
+        <thead>
+            <tr>
+                <td>용도</td>
+                <td>중량</td>
+                <td>갯수</td>
+                <td>가격</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>선물용</td>
+                <td>3kg</td>
+                <td>18~26과</td>
+                <td>35,000원</td>
+            </tr>
+            <tr>
+                <td>선물용</td>
+                <td>5kg</td>
+                <td>11~16과</td>
+                <td>52,000원</td>
+            </tr>
+            <tr>
+                <td>가정용</td>
+                <td>3kg</td>
+                <td>11~16과</td>
+                <td>30,000원</td>
+            </tr>
+            <tr>
+                <td>가정용</td>
+                <td>5kg</td>
+                <td>18~26과</td>
+                <td>47,000원</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <h2>상품 구성2</h2>
+    <table style="text-align: center;">
+        <caption>선물용과 가정용 상품 구성</caption>
+        <thead>
+            <tr>
+                <td>용도</td>
+                <td>중량</td>
+                <td>갯수</td>
+                <td>가격</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">선물용</td>
+                <td>3kg</td>
+                <td>18~26과</td>
+                <td>35,000원</td>
+            </tr>
+            <tr>
+                <td>5kg</td>
+                <td>11~16과</td>
+                <td>52,000원</td>
+            </tr>
+            <tr>
+                <td rowspan="2">가정용</td>
+                <td>3kg</td>
+                <td>11~16과</td>
+                <td>30,000원</td>
+            </tr>
+            <tr>
+                <td>5kg</td>
+                <td colspan="2">18~26과</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <h2>객실 안내</h2>
+    <table style="text-align: center;">
+        <caption>요안도라 객실</caption>
+        <thead>
+            <tr>
+                <td>방 이름</td>
+                <td>대상</td>
+                <td>크기</td>
+                <td>가격</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>유채방</td>
+                <td>여성 도미토리</td>
+                <td rowspan="3">4인실</td>
+                <td rowspan="4">1인 20,000원</td>
+            </tr>
+            <tr>
+                <td rowspan="2">동백방</td>
+                <td>동성 도미토리</td>
+            </tr>
+            <tr>
+                <td>가족 1팀</td>
+            </tr>
+            <tr>
+                <td>천혜양방</td>
+                <td>-</td>
+                <td>2인실</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4">바깥채 전체를 렌트합니다</td>
+            </tr>
+        </tfoot>
+    </table>
+    <hr>
+    <h2></h2>
+</body>
+</html>

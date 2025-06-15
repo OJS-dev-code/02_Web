@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex04_total2</title>
+    <style>
+        h1 {text-align: center;}
+        form {width: 500px; margin: 10px auto;}
+        legend {display: none;}
+        /* 내가 작성함 */
+        /* form {
+            width: 500px;
+            margin: 10px auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        h1 {text-align: center;}
+        legend {display: none;}
+        fieldset {width: 400; border: none;}
+        img[alt="member login"] {margin-bottom: 30px;}
+        input{
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+        select {position: relative; bottom: 2px;} */
+    </style>
+</head>
+<body>
+    <h1><img src="./images/title_memberlogin.gif" alt="member login"></h1>
+    <form action="">
+        <fieldset>
+            <legend>memberlogin</legend>
+            <p>
+                <input type="text" id="user-id" value="아이디" required>
+                <select name="user-email" id="user-id-email" required>
+                    <option value="" selected disabled hidden>-- Select --</option>
+                    <option value="@naver.com">@naver.com</option>
+                    <option value="@gmail.com">@gmail.com</option>
+                    <option value="@daum.net">@daum.net</option>
+                </select>
+            </p>
+            <p>
+                <input type="password" required>
+                <input type="image" src="./images/login.gif" alt="LOGIN">
+            </p>
+            <p>
+                <input type="checkbox" id="id-save"><label for="id-save">아이디저장</label>
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>

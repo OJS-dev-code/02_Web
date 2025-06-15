@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index01_div and span</title>
+    <style>
+        /* block요소 ul을 inline처럼 표시 */
+        div {border: 5px solid #ccc; background-color: aqua;}
+        ul {background-color: pink; width: 500px; margin:0 auto; height: 50px;}
+        li {float: left; list-style: none; padding: 5px 10px;}
+
+        .span {
+            border: 5px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>그룹핑</h1>
+    <h2>div</h2>
+    <p>블럭 요소를 그룹핑할 때 사용한다.</p>
+
+    <!-- block 요소 ul -->
+    <div>
+        <ul>
+            <li>점심시간에&nbsp;</li>
+            <li>뭐 드실건가요?</li>
+        </ul>
+    </div>
+    <h2>span</h2>
+    <p>인라인 요소를 그룹핑할 때 사용한다.</p>
+    <!-- inline요소 a, input -->
+    <span class="span">
+        <a href="#">오늘의 <span style="background-color: red;">수업은</span></a>
+        <a href="#">css</a>
+    </span><input type="text">
+
+    <hr>
+    <h2>블럭 요소에 인라인 방식으로 css 적용하기</h2>
+    <p style="font-size: 12px; color: #009; line-height: 200%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Culpa laudantium laboriosam cupiditate consequatur dolores iure quos iste nulla eius doloribus at, doloremque aspernatur omnis libero corrupti in nam illo quasi.</p>
+
+    <h2>span요소의 사용과 특정 글자 꾸미기</h2>
+    <p>
+        <span style="background-color: rgb(47, 255, 57);">Vegetables</span> fit for use are recognized by the small sprout. <br>
+        쓸모있는 <span style="background-color: rgb(255, 80, 124);">야채</span>는 어린 싹으로 알 수 있다. 될성 싶은 나무는 떡잎부터 알아본다.
+    </p>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title> 투명도를 이용한 롤오버 이미지 만들기 </title>
+		<meta charset="UTF-8" />
+		<style type="text/css">
+			body {
+				font:0.95em Arial,sans-serif;
+				margin:50px 0px;
+				}
+			nav {
+				width:500px;
+				margin:0px auto;
+				}
+			h1 {
+				text-shadow:0px 0px 5px #666;
+				text-align:center;
+				font-size:3em;
+				letter-spacing:5px;
+				color:#d81b21;
+				text-transform:uppercase;
+				}
+			a {
+				text-decoration:none;
+				}
+			img {
+				border:none;
+				}
+			ul, li {
+				margin:0px;
+				padding:0px;
+				}
+			/* Rollover Design */
+			/* 선생님이랑 같이 한거 */
+			/* #gallery {
+				display: flex;
+				list-style: none;
+				justify-content: center;
+			}
+			#gallery li{
+				width: 100px; height: 100px;
+				border: 1px solid #000;
+				margin: 0 10px;
+				overflow: hidden;
+			}
+			#gallery li a{
+				position: relative;
+				display: block;
+
+				width: 100%;height: 100px;
+			}
+			#gallery li a img{
+				width: 100%;
+				opacity: .5;
+			}
+			#gallery li a img:hover {
+				opacity: 1;
+			}
+			#gallery li a .color{
+				position: absolute;
+				width: 100%; 
+				background:rgba(0, 0, 0, .3);
+				left: 0;
+				top: -50px;
+				padding: 10px 0;
+				text-align: center;
+				transition: .5s;
+			}
+			#gallery li:hover a .color {
+				top: 0;
+			} */
+			/* 기존거 */
+			/* #gallery{
+				list-style: none;
+			}
+			#gallery li{
+				float: left;
+				width: 100px;
+				height: 100px;
+				overflow: hidden;
+				border: 2px solid #000;
+				margin-left: 5px;
+			}
+			#gallery li a img{
+				display: block;
+				width: 100px;
+				height: 100px;
+				float: left;
+				opacity: 0.3;
+				cursor: pointer;
+			}
+			#gallery li a:hover img{
+				opacity: 1;
+			}
+			.color{
+				display: block;
+				width: 90px;
+				background: #666;
+				text-align: center;
+				padding: 5px;
+				position: relative;
+				top: 0px;
+				left: 0;
+				opacity: 0.5;
+				z-index: 1;
+				height: 0;	
+			}
+			.color strong{
+				position: relative;
+				display: block;
+				top:-93px;
+				color: #fff;
+				z-index: 2;
+			}
+			#gallery li a .color{
+				visibility: hidden;
+			}
+			#gallery li a:hover .color{
+				visibility: visible;
+				height: 22px;
+			} */
+			 /* 혼자서 한거 */
+			 #gallery {
+				display: flex;
+				list-style: none;
+				justify-content: center;
+			 }
+			 #gallery li{
+				width: 100px; height: 100px;
+				border: 1px solid #000;
+				margin: 0 10px;
+				overflow: hidden;
+			 }
+			 #gallery li a{
+				position: relative;
+				display: block;
+				width: 100%; height: 100px;
+			 }
+			 #gallery li a img{
+				width: 100%; 
+				opacity: .5;
+			 }
+			 #gallery li a img:hover {
+				opacity: 1;
+			 }
+			 #gallery li a .color{
+				position: absolute;
+				width: 100%;
+				background: rgba(0, 0, 0, .3);
+				top: -50px; left: 0;
+				transition: .5s;
+				padding: 10px 0;
+				text-align: center;
+			 }
+			 #gallery li:hover .color {
+				top: 0;
+			 }
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<h1>C/S/S/   s/h/o/e/s -  s/h/o/p</h1>
+		</header>
+		<nav>
+			<ul id="gallery">
+				<li href="#">
+					<a>
+						<img src="images/bag_hotpink.png" alt="hotPink" />
+						<span class="color">
+							<strong>Hot Pink</strong>
+						</span>
+					</a>
+				</li> 
+				<li href="#">
+					<a>
+						<img src="images/bag_navy.png" alt="Navy" />
+						<span class="color">
+							<strong>Navy</strong>
+						</span>
+					</a>
+				</li>
+				<li href="#">
+					<a>
+						<img src="images/bag_white.png" alt="white" />
+						<span class="color">
+							<strong>White</strong>
+						</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</body>
+</html>

@@ -1,0 +1,91 @@
+#wrap {
+    background-color: #f00;
+    width : 700px;
+    height : 900px;
+    /* 바깥쪽 여백 위쪽 마진 0px 나머지는 알아서 */
+    margin : auto; 
+    /* 마진은 앞에 것부터 위 오른쪽 아래 왼쪽 */
+    color: white;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background: violet;
+    /* #wrap으로부터 글자색을 상속받음 */
+    /* color: white;*/
+    font-size: 30px;
+    text-align: center;
+    /* 글자를 태그박스의 정 중앙으로 오게하고 싶으면 
+    height와 같은 값의 line-height를 가져야 한다. */
+    line-height: 100px;
+}
+nav {
+    width: 100%;
+    height: 50px;
+    background: blanchedalmond;
+
+    font-size: 25px;
+    text-align: center;
+    line-height: 50px;
+}
+main {
+    width: 70%;
+    height: 650px;
+    background: #ff0;
+    float: left;
+
+    /* 상속된 글자는 하얀색이지만 바꾸면 바꾼 것이 적용됨  */
+    color : black;
+    font-size: 24px;
+    text-align: center;
+    /* 안쪽 여백 */
+    padding: 20px;
+    box-sizing: border-box;
+}
+section {
+    width: 100%;
+    height: 150px;
+    background-color: antiquewhite;
+}
+#section1 {
+    margin-bottom: 20px;
+    height: 450px;
+    padding: 0 20px 0 20px;
+    box-sizing: border-box;
+}
+article {
+    width: 100%;
+    height: 188px;
+    background-color: white;   
+    margin-bottom: 20px;
+    line-height: 188px;
+}
+#section2 {
+    height: 105px;
+    line-height: 105px;
+}
+aside {
+    width: 30%;
+    height: 650px;
+    background: pink;
+    float : left;
+
+    color : white;
+    font-size: 24px;
+    text-align: center;
+    line-height: 650px;
+    font-weight: 900;
+}
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: darkcyan;
+    /* float 때문에 footer가 떠다니니까 float을 clear 해줌 */
+    clear: both; 
+    color : white;
+    font-size: 24px;
+    text-align: center;
+    line-height: 100px;
+    font-weight: 500;
+}

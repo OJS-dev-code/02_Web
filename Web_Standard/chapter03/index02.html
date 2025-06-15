@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index02_Form</title>
+    <style>
+        /* 요새는 fieldset의 border를 없애고 legend도 안쓰는 추세 */
+        /* fieldset {
+            border: none;
+        }
+        legend {
+            display: none;
+        } */
+    </style>
+</head>
+<body>
+    <form action="#" method="get" name="">
+        <!-- 요새는 fieldset의 border를 없애고 legend도 안쓰는 추세 -->
+        <fieldset>
+            <legend>폼 요소</legend>
+            <label for="labelname">레이블명 이름</label> 
+            <input type="text" id="labelname" placeholder="이름을 작성해주세요">
+            
+            <label for="password">비밀번호 <input type="password" id="password" placeholder="비밀번호를 입력해주세요"></label>
+            
+            <div><input type="search"></div>
+            <div><input type="url"></div>
+
+            <div>
+                <label for="userEmail">이메일</label>
+                <input type="email" id="userEmail">
+            </div>
+
+            <div>
+                <label for="userTEL">전화번호</label>
+                <input type="tel" id="userTEL">
+            </div>
+
+            <div>
+                <label for="number">수량</label>
+                <input type="number" id="number">
+            </div>
+
+            <div>
+                <label for="userrange">범위</label>
+                <input type="range" id="userrange">
+            </div>
+
+            <div>
+                <label for="userDate">날짜-월-주-시간</label>
+                <input type="date" >
+                <input type="month">
+                <input type="week" >
+                <input type="time" >
+            </div>
+
+            <div>
+                <input type="reset">
+                <input type="image" src="./images/btn_gallery.gif">
+                <input type="file">
+            </div>
+
+            <div>
+                <input type="button" value="버튼">
+            </div>
+
+            <input type="submit" value="버튼">
+
+            <div>
+                <input type="hidden">
+            </div>
+        </fieldset>
+        
+    </form>
+</body>
+</html>

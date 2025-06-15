@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09transition,animation</title>
+    <style>
+        .ball{
+            width: 100px;height: 100px;background: red;
+            border-radius: 50px;
+            position: relative;
+            /* animation-name: ani;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate; */
+            animation: ani 3s ;
+            top: 0;left: 0;
+        }
+        @keyframes ani{
+            0% {left: 0; top: 0;}
+            10% {left: 100px;top: 100px;}
+            20% {left: 200px; top: 0px;}
+            30% {left: 300px;top: 100px;} 
+            100% {left: 400px; top: 0;}
+        }
+        .ball2{
+            width: 100px;height: 100px;background: blue;
+            border-radius: 50px;
+            position: absolute;
+            bottom: 0;right: 0;
+            animation: ani2 5s 3s ;
+        }
+        @keyframes ani2{
+            0% {right: 0; bottom: 0px;}
+            50% {right: 0; bottom: 500px;}
+            100% {right: 700px;bottom: 500px;}
+        }
+        
+        .box{
+            width: 100px;height: 100px;
+            margin: 60px auto;
+            background: greenyellow;
+            /* 애니메이션 2개 적용 */
+            animation: rotate 1.5s infinite, background 1.5s infinite alternate;
+        }
+        @keyframes rotate {
+            0% {transform: perspective(120px) rotateX(0deg) rotateY(0deg);}
+            50% {transform: perspective(120px) rotate(-180deg) rotateY(deg);}
+            100% {transform: perspective(120px) rotate(-180deg) rotateY(-180deg);}
+        }
+        @keyframes background {
+            0% {background: red;}
+            50% {background: green;}
+            100% {background: greenyellow;}
+        }
+        body {background: green;}
+            /* 선생님작성 */
+        .button{
+            float: left;
+            border: 1px solid #fff;
+            padding: 20px 60px;
+            position: relative;
+            top: 0;
+            left:100px;
+            width: 150px;
+            text-align: center;
+            color: #fff;
+            overflow: hidden;
+            transition: color 1s;
+           
+        }
+        .button::before{
+           content:"";
+           position: absolute; 
+           top:0%;
+           left: -50px;
+           width: 0;
+           text-align: center;
+           height: 100%;
+           background: #fff;
+           z-index: -1;
+           transform: skewX(35deg);
+           transition: width 1s;
+        
+        }
+        .button:hover{
+            color: #ff5e62
+        }
+        .button:hover::before{
+            width: 150%;
+        }
+    </style>
+</head>
+<body>
+    <div class="ball"></div>
+    <div class="ball2"></div>
+    <div class="box"></div>
+    <div class="button">둘러보기</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+body {
+    background: rgb(253, 197, 197);
+    color: #fff;
+}
+
+@media screen and (max-width:1280px) {
+    body {
+        background: rgb(41, 202, 178);
+    }
+}
+@media screen and (max-width:1024px) {
+    body {
+        background: rgb(202, 41, 178);
+    }
+}
+@media screen and (max-width:960px) {
+    body {
+        background: rgb(118, 71, 189);
+    }
+}
+@media screen and (max-width:768px) {
+    body {
+        background: rgb(182, 207, 82);
+    }
+}
+
+
