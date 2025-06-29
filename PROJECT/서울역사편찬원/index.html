@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>서울역사편찬원 clone</title>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<meta name='Title' content='서울역사편찬원 clone'>
+<meta name='Subject' content='서울역사편찬원 clone'>
+<meta name='Keywords' content='서울역사편찬원, 역사, 서울역사편찬원 clone, 서울역사편찬원 클론코딩, 서울역사편찬원 클론, 서울역사편찬원 홈페이지, 서울역사편찬원 홈페이지 클론코딩, 서울역사편찬원 홈페이지 클론'>
+<meta name='Author' content='jeongseo'>
+<meta name='Publisher' content='jeongseo'>
+<meta name='Description' content=' 서울역사편찬원 클론코딩 프로젝트입니다. 서울역사편찬원의 홈페이지를 참고하여 HTML, CSS, JavaScript로 제작하였습니다.'>
+<meta name='Author-Date' content='2025.06.19.THU'>
+<meta name='Copyright' content='Seoul History Compilation Institute clone by jeongseo'>
+
+<!-- 폰트어썸 -->
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+<!-- 구글폰트 아이콘 -->
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0' />
+<!-- CSS 리셋 -->
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css'>
+<!-- 제이쿼리 3.7 CDN -->
+<script src='https://code.jquery.com/jquery-3.7.0.min.js' crossorigin='anonymous'></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<!-- 로컬 CSS -->
+<link rel='stylesheet' href='./css/style.css'/>
+<!-- 로컬 js -->
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src='./js/script.js' defer></script>
+</head>
+<body>
+<div id="wrap">
+    <header id="header">
+        <div class="headerTopNav">
+            <div class="container">
+                <div class="headerTopLeftLogo">
+                    <h1><a href="#">서울소식</a></h1>
+                    <p><span>서울소식</span><i>(지방시대)동행과 매력의 균형도시 서울을 소개합니다.</i></p>
+                </div>
+                <div class="headerTopRightGnb">
+                    <nav>
+                        <ul>
+                            <li><a href="#">서울소식</a></li>
+                            <li><a href="#">응답소</a></li>
+                            <li><a href="#">정보공개</a></li>
+                            <li><a href="#">분야별정보</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="headerBottomNav">
+            <div class="container">
+                <div class="mobileLogo"><a href="#"><img src="./img/icon/seoul-logo-mobile.png" alt="모바일 서울시 로고"></a></div>
+                <h2 class="logo"><a href="#"><img src="./img/icon/logo.svg" alt="서울역사편찬원"></a></h2>
+                <nav>
+                    <div class="bg"></div>
+                    <ul>
+                        <li><a href="#">도서</a>
+                            <ul>
+                                <li><a href="#">시리즈</a></li>
+                                <li><a href="#">기획</a></li>
+                                <li><a href="#">단행본</a></li>
+                                <li><a href="#">학술지</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">교육</a>
+                            <ul>
+                                <li><a href="#">강좌</a></li>
+                                <li><a href="#">답사</a></li>
+                                <li><a href="#">온라인 특강</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">학술</a>
+                            <ul>
+                                <li><a href="#">공모</a></li>
+                                <li><a href="#">논문</a></li>
+                                <li><a href="#">학술대회</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">서울역사도서관</a>
+                            <ul>
+                                <li><a href="#">이용 안내</a></li>
+                                <li><a href="#">소장 자료 검색</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">서울史 DB <span class="icon"></span></a></li>
+                        <li><a href="#">편찬원 소개</a>
+                            <ul>
+                                <li><a href="#">기관 소개</a></li>
+                                <li><a href="#">편찬원 이야기</a></li>
+                                <li><a href="#">공지사항</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="searchBox">
+                    <a href="#"><img src="./img/icon/icon_search_black.svg" alt="검색"></a>
+                    <a href="#" class="menu mobile">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="content">
+        <section class="section01">
+            <div class="swiper section01_swiper_Frame">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image: url(./img/bannerImg/bannerImg1_1.jpg);">
+                        <div class="inner_wrap">
+                            <div>
+                                <p>서울역사편찬원</p>
+                                <h3>2024 best 책 투표</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" style="background-image: url(./img/bannerImg/bannerImg1_2.jpg);">
+                        <div class="inner_wrap">
+                            <div>
+                                <p>서울 역사를 수집&middot;조사&middot;연구&middot;편찬원</p>
+                                <h3>서울역사편찬원이 함께합니다.</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" style="background-image: url(./img/bannerImg/bannerImg1_3.jpg);">
+                        <div class="inner_wrap">
+                            <div>
+                                <p>서울 역사를 수집&middot;조사&middot;연구&middot;편찬원</p>
+                                <h3>서울역사편찬원이 함께합니다.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="controller-wrap">
+                <div>
+                    <div class="swiper-prevBtn swiper-prevBtn1"></div>
+                    <div class="swiper_pagination swiper_pagination1"></div>
+                    <div class="swiper-nextBtn swiper-nextBtn1"></div>
+                    <button class="swiper_pauseBtn"></button>
+                </div>
+            </div>
+        </section>
+        <section class="section02">
+            <div class="container2">
+                <h2>자주 찾는 서비스</h2>
+                <div class="history_icon_wrap">
+                     <ul>
+                        <li>
+                            <a href="#">
+                                <p class="icon icon1"></p>
+                                <div class="icon_tit">타임라인</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p class="icon  icon2"></p>
+                                <div class="icon_tit">역사연표</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <p class="icon  icon3"></p>
+                                <div class="icon_tit">지명사전</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <p class="icon  icon4"></p>
+                                <div class="icon_tit">E-book</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <p class="icon  icon5"></p>
+                                <div class="icon_tit">오디오북</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <p class="icon  icon6"></p>
+                                <div class="icon_tit">사진자료</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <p class="icon  icon7"></p>
+                                <div class="icon_tit">연구논문</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <p class="icon  icon8"></p>
+                                <div class="icon_tit">ENGLISH</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="section03">
+            <div class="container">
+                <div class="sec3_tit_wrap">
+                    <h2>신간소개</h2>
+                    <a href="#">전체보기 <span class="arrow"></span></a>
+                </div>
+                <div class="sec3_slider_wrap">
+                        <div class="swiper sec3Swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="#"><img src="./img/newbook/newbook01.jpg" alt=""></a>
+                                    <div class="slide_dec">
+                                        <h3>18.일제강점기 상경자의 경성 체험과 생활 공간</h3>
+                                        <p>김태웅 외</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#"><img src="./img/newbook/newbook02.jpg" alt=""></a>
+                                    <div class="slide_dec">
+                                        <h3>서울 동의 역사 양천구</h3>
+                                        <p>김수자 외</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#"><img src="./img/newbook/newbook03.jpg" alt=""></a>
+                                    <div class="slide_dec">
+                                        <h3>서울 동의 역사 강서구</h3>
+                                        <p>김수자 외</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#"><img src="./img/newbook/newbook04.jpg" alt=""></a>
+                                    <div class="slide_dec">
+                                        <h3>19.새벽종이 울렸네 새아침이 밝았네</h3>
+                                        <p>류상진 외</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#"><img src="./img/newbook/newbook05.jpg" alt=""></a>
+                                    <div class="slide_dec">
+                                        <h3>서울 동의 역사 서초구</h3>
+                                        <p>은정태 외</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#"><img src="./img/newbook/newbook06.jpg" alt=""></a>
+                                    <div class="slide_dec">
+                                        <h3>3.도심 속의 일본인들과 그들만의 일상</h3>
+                                        <p>류상진 외</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#"><img src="./img/newbook/newbook07.jpg" alt=""></a>
+                                    <div class="slide_dec">
+                                        <h3>17.근현대 서울지역 여성의 노동과 생활</h3>
+                                        <p>예지숙 외</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#"><img src="./img/newbook/newbook08.jpg" alt=""></a>
+                                    <div class="slide_dec">
+                                        <h3>24.서울의 고전소설</h3>
+                                        <p>김태웅</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#"><img src="./img/newbook/newbook09.jpg" alt=""></a>
+                                    <div class="slide_dec">
+                                        <h3>돌에 새긴 서울사</h3>
+                                        <p>박성현 외</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#"><img src="./img/newbook/newbook10.jpg" alt=""></a>
+                                    <div class="slide_dec">
+                                        <h3>20.국역 경덕궁수리소의궤</h3>
+                                        <p>김우진 역</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </section>
+        <section class="section04">
+            <div class="container">
+                <div class="notice">
+                    <div class="noticeTop notiNews">
+                        <h2>공지사항</h2>
+                        <a href="#">전체보기 <span class="arrow"></span></a>
+                    </div>
+                    <div class="noticeContent notiNewsCnt">
+                        <ul>
+                            <li>
+                                <div class="left"><div class="day">05</div><div class="date">2025.06</div></div>
+                                <div class="right">
+                                    <p>일반</p>
+                                    <div class="h3">2025년 6월, 서울역사달력의 주인공 중명전</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="left"><div class="day">30</div><div class="date">2025.04</div></div>
+                                <div class="right">
+                                    <p>일반</p>
+                                    <div class="h3">2025년 5월, 서울역사달력의 주인공인 구 벨기에 영사관</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="news">
+                    <div class="newsTop notiNews">
+                        <h2>편찬원 뉴스</h2>
+                        <a href="#">전체보기 <span class="arrow"></span></a>
+                    </div>
+                    <div class="newsContent notiNewsCnt">
+                        <ul>
+                            <li>
+                                <div class="left"><div class="day">17</div><div class="date">2025.06</div></div>
+                                <div class="right">
+                                    <p>이벤트</p>
+                                    <div class="h3">서울역사편찬원 2024 best 책 투표</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="left"><div class="day">27</div><div class="date">2024.12</div></div>
+                                <div class="right">
+                                    <p>보도자료</p>
+                                    <div class="h3">70년대 ‘도시새마을운동’ 주역 11인의 생생한 증언 담은 구술자료집 발간</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section05">
+            <div class="swiper tabslide">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide tab_slider" title="강좌탭" id="program1">
+                        <div class="slide_cont_wrap">
+                            <h2>
+                                <b>강좌</b>
+                                <br>
+                                시민들에게 역사를 알릴 수 있는 <br>
+                                <em>다양한 프로그램</em>을 운영 중입니다 <br>
+                                <a href="#" class="more_view">프로그램 전체보기</a>
+                            </h2>
+                            <div class="tab_slide_content">
+                                <div class="contents_type">
+                                    <span class="type type1">모집마감</span>
+                                    <span class="type type2">일반강좌</span>
+                                    <h3><a href="javascript:">2025년도 상반기 서울역사강좌 &lt;역사 속 서울 사람들의 살아남기&gt;당첨자 발표 및 안내 사항</a></h3>
+                                    <p class="content_text">2025년도 상반기 서울역사강좌 수강생 모집에 많은 관심과 성원을 보내주신 시민 여러분께 깊이 감사드립니다.좋은 강의로 성원에 보답하겠습니다.</p>
+                                    <ul class="schedule_list">
+                                        <li>
+                                            <em>&middot;모집</em>
+                                            <span>~</span>
+                                        </li>
+                                        <li>
+                                            <em>&middot;일시</em>
+                                            <span>~</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide tab_slider" title="답사탭" id="program2">
+                        <div class="slide_cont_wrap">
+                            <h2>
+                                <b>답사</b>
+                                <br>
+                                시민들에게 역사를 알릴 수 있는 <br>
+                                <em>다양한 프로그램</em>을 운영 중입니다 <br>
+                                <a href="#" class="more_view">프로그램 전체보기</a>
+                            </h2>
+                            <div class="tab_slide_content">
+                                <div class="swiper tab-con2">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="contents_type">
+                                                <span class="type type2">일반답사</span>
+                                                <h3><a href="javascript:">2025년 6월 서울역사문화답사 당첨자 안내</a></h3>
+                                                <p class="content_text">2025년 서울역사편찬원 6월 서울역사문화답사에 신청해 주신 분들께 감사드립니다. 6월 16일(월) 추첨 결과, 신청해주신 총 86명(54팀) 중 40명(23팀)이 당첨되었습니다.</p>
+                                                <ul class="schedule_list">
+                                                    <li>
+                                                        <em>&middot;모집</em>
+                                                        <span>~</span>
+                                                    </li>
+                                                    <li>
+                                                        <em>&middot;일시</em>
+                                                        <span>2025-06-21 ~ 2025-06-21</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="contents_type">
+                                                <span class="type type2">가족답사</span>
+                                                <h3><a href="javascript:">2025년 엄마아빠와 함께하는 교과서 역사기행 안내(전체일정 및 코스)</a></h3>
+                                                <p class="content_text">안녕하세요. 서울역사편찬원에서는 시민들에게 서울의 역사와 문화를 소개하고 그 이해를 높이고자 역사학자와 함께하는 교육프로그램을 운영하고 있습니다.</p>
+                                                <ul class="schedule_list">
+                                                    <li>
+                                                        <em>&middot;모집</em>
+                                                        <span>~</span>
+                                                    </li>
+                                                    <li>
+                                                        <em>&middot;일시</em>
+                                                        <span>2025-04-12 ~ 2025-10-25</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="contents_type">
+                                                <span class="type type1">안내</span>
+                                                <span class="type type2">일반답사</span>
+                                                <h3><a href="javascript:">2025년 서울역사문화답사 특색있는 서울 지역의 역사와 문화 - 강남편 (전체일정 및 코스 안내)</a></h3>
+                                                <p class="content_text">안녕하세요. 서울역사편찬원에서는 매해 시민들에게 서울의 역사와 문화를 소개하고 그 이해를 높이고자 역사학자와 함께하는 서울역사문화답사 프로그램을 운영하고 있습니다.</p>
+                                                <ul class="schedule_list">
+                                                    <li>
+                                                        <em>&middot;모집</em>
+                                                        <span>2025-03-12 ~ 2025-11-15</span>
+                                                    </li>
+                                                    <li>
+                                                        <em>&middot;일시</em>
+                                                        <span>~</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="controller_wrap">
+                                        <div>
+                                            <div class="swiper-prevBtn swiper-prevBtn2"></div>
+                                            <div class="swiper_pagination swiper_pagination2"></div>
+                                            <div class="swiper-nextBtn swiper-nextBtn2"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide tab_slider" title="공모탭" id="program3">
+                        <div class="slide_cont_wrap">
+                            <h2>
+                                <b>공모</b>
+                                <br>
+                                시민들에게 역사를 알릴 수 있는 <br>
+                                <em>다양한 프로그램</em>을 운영 중입니다 <br>
+                                <a href="#" class="more_view">프로그램 전체보기</a>
+                            </h2>
+                            <div class="tab_slide_content">
+                                <div class="swiper tab-con3">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="contents_type">
+                                                <span class="type type1">구술</span>
+                                                <span class="type type2">결과</span>
+                                                <h3><a href="javascript:">2025년_서울역사구술채록사업_면담책임자_선정결과(2차)_안내(공고)</a></h3>
+                                                <p class="content_text">서울역사편찬원 공고 제2025-16호 2025년도 서울역사구술채록사업 면담책임자 선정(2차) 결과 안내 2025년도 서울역사구술채록사업 면담책임자 모집(2차)을 통해 선정되신 분을 붙임과 같이 공고합니다.</p>
+                                                <ul class="schedule_list">
+                                                    <li>
+                                                        <em>&middot;모집</em>
+                                                        <span>~</span>
+                                                    </li>
+                                                    <li>
+                                                        <em>&middot;일시</em>
+                                                        <span>~</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="contents_type">
+                                                <span class="type type1">연구</span>
+                                                <span class="type type2">결과</span>
+                                                <h3><a href="javascript:">2025년 서울역사중점연구 과제 선정 결과 안내</a></h3>
+                                                <p class="content_text">서울역사편찬원 공고 제2025-11호 2025년도 서울역사구술채록사업 면담책임자 모집(2차) 공고 서울역사편찬원 공고 제2025-11호에 의하여 2025년도 서울역사구술채록사업 면담책임자를 공개모집을 아래(붙임)와 같이 공고합니다. 응모하고자 하는 분은 아래의 절차에 따라 신청하여 주시기 바랍니다.</p>
+                                                <ul class="schedule_list">
+                                                    <li>
+                                                        <em>&middot;모집</em>
+                                                        <span>2025-02-26~2025-03-14</span>
+                                                    </li>
+                                                    <li>
+                                                        <em>&middot;일시</em>
+                                                        <span>2025-02-26~2025-03-14</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="contents_type">
+                                                <span class="type type1">구술</span>
+                                                <span class="type type2">종료</span>
+                                                <h3><a href="javascript:">2025년도 서울역사구술채록사업 면담책임자 모집(2차) 공고</a></h3>
+                                                <p class="content_text">서울역사편찬원 공고 제2025-12호에 의하여 2025년 서울역사중점연구에 선정된 과제를 다음과 같이 공고합니다.</p>
+                                                <ul class="schedule_list">
+                                                    <li>
+                                                        <em>&middot;모집</em>
+                                                        <span>2025-02-28~2025-03-14</span>
+                                                    </li>
+                                                    <li>
+                                                        <em>&middot;일시</em>
+                                                        <span>~</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="controller_wrap">
+                                        <div>
+                                            <div class="swiper-prevBtn swiper-prevBtn3"></div>
+                                            <div class="swiper_pagination swiper_pagination3"></div>
+                                            <div class="swiper-nextBtn swiper-nextBtn3"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide tab_slider" title="논문탭" id="program4">
+                        <div class="slide_cont_wrap">
+                            <h2>
+                                <b>강좌</b>
+                                <br>
+                                시민들에게 역사를 알릴 수 있는 <br>
+                                <em>다양한 프로그램</em>을 운영 중입니다 <br>
+                                <a href="#" class="more_view">프로그램 전체보기</a>
+                            </h2>
+                            <div class="tab_slide_content">
+                                <div class="contents_type">
+                                    <span class="type type1">논문투고</span>
+                                    <h3><a href="javascript:">서울과 역사 제120호 논문 투고기간 연장(~5월 8일) 안내</a></h3>
+                                    <p class="content_text">『서울과 역사』는 서울을 중심으로 전개된 역사적 사실을 조사・규명, 분석・논증하여 서울의 역사 정체성을 학계의 전문가들과 함께 확립해 나가고자 연 3회(2월, 6월, 10월) 발간하는 등재학술지입니다.</p>
+                                    <ul class="schedule_list">
+                                        <li>
+                                            <em>&middot;일정</em>
+                                            <span>2025-05-08</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pagination"></div>
+                <div class="swiper_pauseBtn"></div>
+            </div>
+        </section>
+        <section class="section06">
+            <div class="container">
+                <div class="notice">
+                    <div class="noticeTop notiNews">
+                        <h2>온라인특강</h2>
+                        <a href="#">전체보기 <span class="arrow"></span></a>
+                    </div>
+                    <div class="noticeContent  on">
+                        <ul>
+                            <li>
+                               <div class="img img1">
+                                    <a href="https://www.youtube.com/watch?v=VEVfN1bPxcg">
+                                        <span class="playBtn"></span>
+                                    </a>
+                               </div> 
+                               <div class="text">
+                                    <h3>한강, 고대 유적을 만나다 | 백제의 꿈</h3>
+                                    <p>백제의 숨결이 살아 숨쉬는 거대한 시간여행지가 서울에 남아있습니다. 이번 영상에서 대신답사해드릴 곳은 강동, 송파 지역의 고대유적지입니다.</p>
+                               </div>
+                            </li>
+                            <li>
+                                <div class="img img2">
+                                    <a href="https://www.youtube.com/watch?v=-KTddbReUtQ">
+                                        <span class="playBtn"></span>
+                                    </a>
+                               </div> 
+                               <div class="text">
+                                    <h3>Jongmyo and Sajik as Symbols of the Joseon</h3>
+                                    <p>[Seoul history in easy listening] Seoul Historiography Institute delivers the history and culture contained in the beautiful scenery</p>
+                               </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="notiNews">
+                        <h2>팝업존</h2>
+                    </div>
+                    <div class="popupzon">
+                        <div class="swiper popupzonSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="./img/popupzone01.jpg" alt="팝업존1">
+                                </div>
+                                <div class="swiper-slide">
+                                     <img src="./img/popupzone02.jpg" alt="팝업존2">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination swiper-pagination4"></div>
+                            <div class="swiper_pauseBtn"></div>
+                            <div class="more"><a href="javascript:">모아보기+</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="section06More">
+            <div class="moreBox">
+                <div class="moreTit">
+                    <h2>모아보기</h2>
+                    <div class="closeBtn"><i class="fas fa-times"></i></div>
+                </div>
+                <div class="moreImgBox">
+                    <img src="./img/popupzone01.jpg" alt="팝업존1">
+                    <img src="./img/popupzone02.jpg" alt="팝업존2">
+                </div>
+            </div>
+        </div>
+        <section class="section07">
+            <div class="container7">
+                <h2><span class="red">#</span>서울역사편찬원</h2>
+                <div class="section07Grid">
+                    <div class="swiper gridSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="hoverbox">
+                                    <h3>historyseoul</h3>
+                                    <p>충무공 이순신 장군 동상에 감춰진 비밀!</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="hoverbox">
+                                    <h3>historyseoul</h3>
+                                    <p>충무공 이순신 장군 동상에 감춰진 비밀!</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="hoverbox">
+                                    <h3>historyseoul</h3>
+                                    <p>충무공 이순신 장군 동상에 감춰진 비밀!</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="hoverbox">
+                                    <h3>historyseoul</h3>
+                                    <p>충무공 이순신 장군 동상에 감춰진 비밀!</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="hoverbox">
+                                    <h3>historyseoul</h3>
+                                    <p>충무공 이순신 장군 동상에 감춰진 비밀!</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="hoverbox">
+                                    <h3>historyseoul</h3>
+                                    <p>충무공 이순신 장군 동상에 감춰진 비밀!</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="hoverbox">
+                                    <h3>historyseoul</h3>
+                                    <p>충무공 이순신 장군 동상에 감춰진 비밀!</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="hoverbox">
+                                    <h3>historyseoul</h3>
+                                    <p>충무공 이순신 장군 동상에 감춰진 비밀!</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="hoverbox">
+                                    <h3>historyseoul</h3>
+                                    <p>충무공 이순신 장군 동상에 감춰진 비밀!</p>
+                                </div>
+                            </div>
+                             <div class="swiper-slide">
+                                <div class="hoverbox">
+                                    <h3>historyseoul</h3>
+                                    <p>충무공 이순신 장군 동상에 감춰진 비밀!</p>
+                                </div>
+                            </div>
+                             <div class="swiper-slide">
+                                <div class="hoverbox">
+                                    <h3>historyseoul</h3>
+                                    <p>충무공 이순신 장군 동상에 감춰진 비밀!</p>
+                                </div>
+                            </div>
+                             <div class="swiper-slide">
+                                <div class="hoverbox">
+                                    <h3>historyseoul</h3>
+                                    <p>충무공 이순신 장군 동상에 감춰진 비밀!</p>
+                                </div>
+                            </div>
+                             <div class="swiper-slide">
+                                <div class="hoverbox">
+                                    <h3>historyseoul</h3>
+                                    <p>충무공 이순신 장군 동상에 감춰진 비밀!</p>
+                                </div>
+                            </div>
+                             <div class="swiper-slide">
+                                <div class="hoverbox">
+                                    <h3>historyseoul</h3>
+                                    <p>충무공 이순신 장군 동상에 감춰진 비밀!</p>
+                                </div>
+                            </div>
+                             <div class="swiper-slide">
+                                <div class="hoverbox">
+                                    <h3>historyseoul</h3>
+                                    <p>충무공 이순신 장군 동상에 감춰진 비밀!</p>
+                                </div>
+                            </div>
+                             <div class="swiper-slide">
+                                <div class="hoverbox">
+                                    <h3>historyseoul</h3>
+                                    <p>충무공 이순신 장군 동상에 감춰진 비밀!</p>
+                                </div>
+                            </div>
+                             <div class="swiper-slide">
+                                <div class="hoverbox">
+                                    <h3>historyseoul</h3>
+                                    <p>충무공 이순신 장군 동상에 감춰진 비밀!</p>
+                                </div>
+                            </div>
+                             <div class="swiper-slide">
+                                <div class="hoverbox">
+                                    <h3>historyseoul</h3>
+                                    <p>충무공 이순신 장군 동상에 감춰진 비밀!</p>
+                                </div>
+                            </div>
+                             <div class="swiper-slide">
+                                <div class="hoverbox">
+                                    <h3>historyseoul</h3>
+                                    <p>충무공 이순신 장군 동상에 감춰진 비밀!</p>
+                                </div>
+                            </div>
+                             <div class="swiper-slide">
+                                <div class="hoverbox">
+                                    <h3>historyseoul</h3>
+                                    <p>충무공 이순신 장군 동상에 감춰진 비밀!</p>
+                                </div>
+                            </div>
+                             <div class="swiper-slide">
+                                <div class="hoverbox">
+                                    <h3>historyseoul</h3>
+                                    <p>충무공 이순신 장군 동상에 감춰진 비밀!</p>
+                                </div>
+                            </div>
+                             <div class="swiper-slide">
+                                <div class="hoverbox">
+                                    <h3>historyseoul</h3>
+                                    <p>충무공 이순신 장군 동상에 감춰진 비밀!</p>
+                                </div>
+                            </div>
+                             <div class="swiper-slide">
+                                <div class="hoverbox">
+                                    <h3>historyseoul</h3>
+                                    <p>충무공 이순신 장군 동상에 감춰진 비밀!</p>
+                                </div>
+                            </div>
+                             <div class="swiper-slide">
+                                <div class="hoverbox">
+                                    <h3>historyseoul</h3>
+                                    <p>충무공 이순신 장군 동상에 감춰진 비밀!</p>
+                                </div>
+                            </div>
+                             <div class="swiper-slide">
+                                <div class="hoverbox">
+                                    <h3>historyseoul</h3>
+                                    <p>충무공 이순신 장군 동상에 감춰진 비밀!</p>
+                                </div>
+                            </div>
+                             <div class="swiper-slide">
+                                <div class="hoverbox">
+                                    <h3>historyseoul</h3>
+                                    <p>충무공 이순신 장군 동상에 감춰진 비밀!</p>
+                                </div>
+                            </div>
+                             <div class="swiper-slide">
+                                <div class="hoverbox">
+                                    <h3>historyseoul</h3>
+                                    <p>충무공 이순신 장군 동상에 감춰진 비밀!</p>
+                                </div>
+                            </div>
+                             <div class="swiper-slide">
+                                <div class="hoverbox">
+                                    <h3>historyseoul</h3>
+                                    <p>충무공 이순신 장군 동상에 감춰진 비밀!</p>
+                                </div>
+                            </div>
+                             <div class="swiper-slide">
+                                <div class="hoverbox">
+                                    <h3>historyseoul</h3>
+                                    <p>충무공 이순신 장군 동상에 감춰진 비밀!</p>
+                                </div>
+                            </div>
+                             <div class="swiper-slide">
+                                <div class="hoverbox">
+                                    <h3>historyseoul</h3>
+                                    <p>충무공 이순신 장군 동상에 감춰진 비밀!</p>
+                                </div>
+                            </div>
+                             <div class="swiper-slide">
+                                <div class="hoverbox">
+                                    <h3>historyseoul</h3>
+                                    <p>충무공 이순신 장군 동상에 감춰진 비밀!</p>
+                                </div>
+                            </div>
+                             <div class="swiper-slide">
+                                <div class="hoverbox">
+                                    <h3>historyseoul</h3>
+                                    <p>충무공 이순신 장군 동상에 감춰진 비밀!</p>
+                                </div>
+                            </div>
+                             <div class="swiper-slide">
+                                <div class="hoverbox">
+                                    <h3>historyseoul</h3>
+                                    <p>충무공 이순신 장군 동상에 감춰진 비밀!</p>
+                                </div>
+                            </div>
+                             <div class="swiper-slide">
+                                <div class="hoverbox">
+                                    <h3>historyseoul</h3>
+                                    <p>충무공 이순신 장군 동상에 감춰진 비밀!</p>
+                                </div>
+                            </div>
+                             <div class="swiper-slide">
+                                <div class="hoverbox">
+                                    <h3>historyseoul</h3>
+                                    <p>충무공 이순신 장군 동상에 감춰진 비밀!</p>
+                                </div>
+                            </div>
+                             <div class="swiper-slide">
+                                <div class="hoverbox">
+                                    <h3>historyseoul</h3>
+                                    <p>충무공 이순신 장군 동상에 감춰진 비밀!</p>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="swiper-button-next swiper-button-next7"></div>
+                        <div class="swiper-button-prev swiper-button-prev7"></div>
+                    </div>
+                    <div class="swiper-pagination7"></div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <div class="f_addresswrap">
+                    <h2 class="f_logo">
+                        <img src="./img/icon/footer_logo.png" alt="seoul logo">
+                    </h2>
+                    <ul>
+                        <li><a href="javascript:">개인정보처리방침</a></li>
+                        <li><a href="javascript:">영상정보처리기기 운영방침</a></li>
+                        <li><a href="javascript:">사이트맵</a></li>
+                    </ul>
+                    <div class="addresswrap">
+                        <address>05540 서울특별시 송파구 올림픽로 424</address> 
+                        <div class="email">이메일 history@seoul.go.kr</div> 
+                        <p>일반문의 02-420-1255~1256</p> 
+                        <p>강좌답사 02-420-1257~1258</p>
+                    </div>
+                    <div class="copy">Copyright © Seoul Historiography Institute. All Rights Reserved.</div>
+                </div>
+                <div class="f_snswrap">
+                    <div class="sns">
+                        <ul>
+                            <li><a href="javascript:"><img src="./img/icon/footer_youtube.png" alt="유튜브"></a></li>
+                            <li><a href="javascript:"><img src="./img/icon/footer_insta.png" alt="인스타그램"></a></li>
+                            <li><a href="javascript:"><img src="./img/icon/footer_facebook.png" alt="페이스북"></a></li>
+                        </ul>
+                    </div>
+                    <div class="familysite">
+                        <input type="text" placeholder="패밀리사이트">
+                        <span class="btn"></span>
+                        <div class="sitebox">
+                            <ul>
+                                <li><a target="_blank" href="https://museum.seoul.go.kr/www/NR_index.do?sso=ok">서울역사박물관</a></li>
+                                <li><a target="_blank" href="https://baekjemuseum.seoul.go.kr/">한성백제박물관</a></li>
+                                <li><a target="_blank" href="https://www.nahf.or.kr/main.do">동북아역사재단</a></li>
+                                <li><a target="_blank" href="https://kyu.snu.ac.kr/">규장각한국학연구원</a></li>
+                                <li><a target="_blank" href="https://www.aks.ac.kr/index.do">한국고전번역원</a></li>
+                                <li><a target="_blank" href="https://www.history.go.kr/">국사편찬위원회</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="randombox">
+                        <img id="footerImg" src="./img/footer/footer01.png" alt="랜덤이미지배너">
+                        <a href="https://www.wa.or.kr/"><img src="./img/icon/wa_mark.png" alt="웹접근성"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="scrollTop">
+            <div class="scrollTopBtn">Top</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

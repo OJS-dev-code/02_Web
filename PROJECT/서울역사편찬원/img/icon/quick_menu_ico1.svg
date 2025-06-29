@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="38" height="37.997" viewBox="0 0 38 37.997">
+  <g id="icon" transform="translate(-1938 -385.1)">
+    <rect id="사각형_5926" data-name="사각형 5926" width="37.997" height="37.997" transform="translate(1938 385.1)" fill="red" opacity="0"/>
+    <g id="_-Product-Icons" data-name="🔍-Product-Icons" transform="translate(1938 388.666)">
+      <g id="ic_fluent_tablet_24_regular" transform="translate(0 0)">
+        <circle id="타원_295" data-name="타원 295" cx="1.5" cy="1.5" r="1.5" transform="translate(18 7.207)" fill="#fff"/>
+        <g id="사각형_6060" data-name="사각형 6060" transform="translate(0 0.434)" fill="none" stroke="#fff" stroke-width="2">
+          <rect width="38" height="30" rx="4" stroke="none"/>
+          <rect x="1" y="1" width="36" height="28" rx="3" fill="none"/>
+        </g>
+        <rect id="사각형_6061" data-name="사각형 6061" width="12" height="2" rx="1" transform="translate(13 21.434)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="12" height="13.595" viewBox="0 0 12 13.595">
+  <g id="arrow" transform="translate(11.5 12) rotate(180)">
+    <rect id="container" width="12" height="12" transform="translate(-0.5)" fill="red" opacity="0"/>
+    <path id="패스_12" data-name="패스 12" d="M6,12,0,6,6,0" transform="translate(2.999 -1.241)" fill="none" stroke="#888" stroke-width="1"/>
+  </g>
+</svg>

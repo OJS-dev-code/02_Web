@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.root{
+    --var-mainblue: #253f85;
+    --var-textblue: #071f60;
+    --var-textbrown: #6b4d30;
+    --var-textorange: #f1ae1d;
+    --var-textmain: #202020;
+    --var-mainyellow: #ffe600;
+    --var-footertext:#262626
+
+}
+* { padding: 0; margin: 0;}
+a{text-decoration: none; color:var(--var-textmain); font-size: 1.2rem;}
+ul{list-style: none;}
+
+#wrap{
+    width: 1920px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+header{
+    width: 100%;
+    height: 123px;
+}
+#header-inner{
+    position: fixed;
+    background: #fff;
+    z-index: 9999;
+    width: 100%;
+    height: 123px;
+    top: 0;
+    left: 0;
+}
+.sub-bg{
+    width: 100%;
+    height: 0;
+    position: absolute;
+    top: 123px;
+    left: 0;
+    background: url(../image/menu-bg.jpg) repeat-x top left;
+    background-color: #f8f8f8; 
+    transition: height .4s ease-in-out;
+}
+.sub-bg.on{
+    height: 159px;
+}
+.container{
+    max-width: 1150px;
+    position: relative;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.tabbar{
+    display: flex;
+    justify-content: right;
+}
+.tabbar>li{
+    position: relative;
+}
+.tabbar>li:nth-child(1)::after{
+    display: inline-block;
+    width: 1px;
+    height: 15px;
+    margin: 0 15px;
+    vertical-align: middle;
+    background: #e0e0e0;
+    content: '';
+}
+.tabbar>li:nth-child(2)::before{
+    content: url(../image/facebook-md.png);
+}
+.tabbar>li:nth-child(2){margin-right: 10px;}
+.tabbar>li:nth-child(3)::before{
+    content: url(../image/insta-md.png);
+}
+.tabbar>li>a{
+    color: #8b8b8b;
+}
+
+.nav-wrap{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.nav-wrap>.nav>ul{
+    display: flex;
+    justify-content: space-between;
+}
+.nav>ul>li{
+    padding: 0 32px;
+    position: relative;
+}
+.nav>ul>li>ul{
+    display: none;
+    position: absolute;
+    top: 150%;
+    text-align: left;
+    width: 130px;
+}
+.nav>ul>li>ul>li{
+    width: 100%;
+    line-height: 1.8;
+}
+.nav>ul>li>ul>li>a{
+    font-size: 16px;
+}
+
+
+main{
+    width: 100%;
+}
+
+.main-slide{
+    width: 100%;
+    height: 600px;
+    background: violet;
+}
+.main-slide .swiper{
+    width: 100%;
+    height: 100%;
+}
+.main-slide .swiper .swiper-slide{
+    text-align: center;
+    font-size: 18px;
+    background: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-slide .swiper .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+}
+
+.mainSwiper .swiper-pagination-bullets {
+    bottom: 24px;
+}
+.mainSwiper .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, .7);
+    opacity: 1;
+    border-radius: 100%;
+    display: inline-block;
+}
+.mainSwiper .swiper-pagination-bullet-active {
+    background: #ffe600;    
+}
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+    margin: 0 10px;
+}
+
+#section1{
+    width: 100%;
+    height: 320px;
+    display: flex;
+}
+.section-half{
+    width: 50%;
+    height: 100%;
+    background: green;
+}
+#section1 .section-half:nth-child(1){
+    background: url(../image/main_sec1.jpg) left 60% center/cover no-repeat;
+    /* background-position: 60%;
+    background-size: cover; */
+}
+#section1 .section-half:nth-child(2){
+    background: url(../image/main_intro_bn.jpg) #253f85 no-repeat;
+    background-position: 80% 50%;
+}
+
+#section2{
+    width: 100%;
+    height: 600px;
+    background-image: url(../image/main_sec2.jpg);
+}
+
+#section3{
+    width: 100%;
+    height: 605px;
+    display: flex;
+    background:greenyellow;
+}
+.section-left{
+    flex: 3;
+    height: 100%;
+    background:url(../image/main_sec3.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+.section-right{
+    flex:2;
+    height: 100%;
+    background: url(../image/main_sec4.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+
+#section4{
+    margin-top: 15px;
+    background: lemonchiffon;
+    height: 495px;
+    display: flex;
+}
+#section4 .section-half:nth-child(1){
+    width: calc(46% - 30px);
+    background: yellowgreen;
+    margin: 0 15px;
+}
+#section4 .section-half:nth-child(1)>.bannerContainer{
+    width: 100%;
+    height: inherit;
+    background: red;
+    display: flex;
+    flex-direction: column;
+    padding-left: 50%;
+}
+.store-banner{
+    width: 50%;
+    height: 240px;
+    margin-bottom: 9px;
+    border: 2px solid #071f60;
+    background-color: #ffffff;
+}
+.franchise-banner{
+    width: 50%;
+    height: 240px;
+    border: 2px solid #071f60;
+    background-color: #ffffff;
+    background-image: url(../image/main_sec6.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 50% auto;
+
+}
+#section4 .section-half:nth-child(2){
+    width: 54%;
+    background-image: url(../image/main_sec5.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+footer{
+    height: 280px;
+    margin-top: 100px;
+    border-top: 3px solid #ffe600;
+    background: lemonchiffon;
+}
+footer .container{
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.f_center a{font-size: 13px; color: #262626;}
+.f_center{
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 13px;
+    color: #262626;
+    font-family: 'Montserrat','Noto Sans KR',AppleGothic,sans-serif;
+}
+.f_center .f_logo{}
+.f_center .privacy_policy a{font-weight: 600;}
+.f_center .f_address_wrap{}
+.f_center .f_address_wrap ul{
+    display: flex;
+    justify-content: center;
+}
+.f_center .f_address_wrap ul li{line-height: 1.7;}
+.f_center .f_address_wrap ul li:not(:last-child)::after{
+    content: 'l';
+    padding: 0 14px;
+}
+.f_center .f_address_wrap ul li .tit{font-weight: 600;}
+.f_center .f_copy{
+    line-height: 150%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.f_familysite{
+    position: absolute;
+    top: 0;
+    right: 30px;
+}
+.f_familysite .familysite{
+}
+.f_familysite .familyBtn{}
